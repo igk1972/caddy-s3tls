@@ -1,6 +1,8 @@
 module github.com/igk1972/caddy-s3tls
 
-go 1.12
+go 1.13
+
+replace github.com/mholt/certmagic => github.com/mholt/certmagic v0.6.2
 
 require (
 	github.com/aws/aws-sdk-go v1.25.23
