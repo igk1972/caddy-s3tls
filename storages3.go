@@ -16,6 +16,7 @@ const (
 	envNameEndpoint = "AWS_S3_ENDPOINT"
 	envNameBucket   = "AWS_S3_BUCKET"
 	envNamePath     = "AWS_S3_PATH"
+	envValueRegion  = "us-east-1"
 	envValueBucket  = "caddy"
 	envValuePath    = "certmagic"
 )
@@ -33,6 +34,7 @@ func newS3Storage() *magicstorage.S3Storage {
 	if endpoint := os.Getenv(envNameEndpoint); endpoint != "" {
 		cfg.Endpoint = aws.String(endpoint)
 	}
+	cfg.Region = aws.String(envValueRegion)
 	if region := os.Getenv(envNameRegion); region != "" {
 		cfg.Region = aws.String(region)
 	}
