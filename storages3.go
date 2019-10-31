@@ -12,10 +12,10 @@ import (
 )
 
 const (
-	envNameEndpoint = "AWS_S3_ENDPOINT"
 	envNameRegion   = "AWS_REGION"
-	envNameBucket   = "AWS_BUCKET"
-	envNamePath     = "AWS_PATH"
+	envNameEndpoint = "AWS_S3_ENDPOINT"
+	envNameBucket   = "AWS_S3_BUCKET"
+	envNamePath     = "AWS_S3_PATH"
 	envValueBucket  = "caddy"
 	envValuePath    = "certmagic"
 )
