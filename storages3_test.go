@@ -3,29 +3,23 @@
 package storages3
 
 import (
-	"os"
 	"path"
 	"testing"
 	"time"
 
+	"github.com/igk1972/magicstorage"
 	"github.com/mholt/certmagic"
-	"github.com/securityclippy/magicstorage"
 	"github.com/stretchr/testify/assert"
 )
 
-// const TestPrefix = "s3tlstest"
+const TestPrefix = "s3tlstest"
 
 // these tests needs a running S3 server
 func setupS3Env(t *testing.T) *S3Storage {
 
-	// os.Setenv(EnvNamePrefix, TestPrefix)
-	// os.Setenv(HTTPTokenEnvName, "2f9e03f8-714b-5e4d-65ea-c983d6b172c4")
-	//
-	cs, err := NewS3Storage()
+	cs, err := magicstorage.NewS3Storage("", "")
 	assert.NoError(t, err)
 
-	// _, err = cs.S3Client.DeleteTree(TestPrefix, nil)
-	// assert.NoError(t, err)
 	return cs
 }
 
