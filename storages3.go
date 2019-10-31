@@ -51,7 +51,7 @@ func newS3Storage() *magicstorage.S3Storage {
 	svc := s3.New(sess)
 	store := &magicstorage.S3Storage{
 		Bucket: aws.String(awsBucket),
-		Svc:    svc,
+		SVC:    svc,
 		Path:   awsPath,
 	}
 	return store
